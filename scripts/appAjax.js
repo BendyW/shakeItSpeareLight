@@ -14,6 +14,8 @@ function fetchPoem() {
         success: function(data) {
             console.log(data);
             app.poems.push(data.poem);
+            // call our HOF
+            app.buildPoem();
         },
         error: function(err) {
             console.log(err);
